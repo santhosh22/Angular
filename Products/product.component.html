@@ -1,0 +1,30 @@
+<h1 style="color: blue;"> {{title}} </h1>
+
+<!-- <button type="button" class="btn btn-primary"> Add Me </button> -->
+
+<div class="panel panel-primary">
+    <div class="panel-heading"> 
+        <h4 class="a">{{ desc }}</h4>
+    </div>
+    <div class="panel-body"> 
+       <table class="table">
+           <thead>
+            <tr>
+                 <th> Image </th>
+                 <th> Product Name </th>
+                 <th> Product Code </th>
+                <th> Price </th>
+             </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let prod of products">
+                <td><img [src]="prod.imageUrl" [style.width.px]=width ></td>
+                <td>{{prod.productName}} </td>
+                <td>{{prod.productCode}} </td>
+                <td>{{prod.price}} </td>
+            </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</div>
